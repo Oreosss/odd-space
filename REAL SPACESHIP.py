@@ -141,10 +141,7 @@ def spaceship(C1,C3,C5,C7,win ):
     fire1 = Polygon(Point(220,208), Point(185,180), Point(185,270), Point(220,242))
     fire1.setFill("Orange")
     fire1.setOutline("Red")
-    fire1.draw(win)
-            
-
-    
+    fire1.draw(win)  
 
 def laser(C5,C10,win):
     Laser = Rectangle(Point(380,220), Point(450,230))
@@ -173,19 +170,31 @@ def main():
 
     colors = [C1,C2,C3,C4,C5,C6,C7,C8,C9,C10]
 
-    space_process = Process(target = space,args = (C1,C2,C3,C4,C5,C6,C7,C8,C9,C10))
+    space_process = Process(target = space,args = (colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)]))
+
     space_process.daemon = True
     space_process.start()
 
-    space_process1 = Process(target = space,args = (C1,C2,C3,C4,C5,C6,C7,C8,C9,C10))
+    space_process1 = Process(target = space,args = (colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)]))
+
     space_process1.daemon = True
     space_process1.start()
 
-    space_process2 = Process(target = space,args = (C1,C2,C3,C4,C5,C6,C7,C8,C9,C10))
+    space_process2 = Process(target = space,args = (colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)]))
+
     space_process2.daemon = True
     space_process2.start()
 
-    space_process3 = Process(target = space,args = (C1,C2,C3,C4,C5,C6,C7,C8,C9,C10))
+    space_process3 = Process(target = space,args = (colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],colors[randrange(1,9)],
+                                                   colors[randrange(1,9)]))
+
     space_process3.daemon = True
     space_process3.start()
 
